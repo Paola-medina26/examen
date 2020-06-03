@@ -1,0 +1,32 @@
+{{> header}}
+<div class="container">
+    <h1>Pintores</h1>
+    {{#if pintores }}
+    
+        <thead>
+        <tr>
+            <td>Nombre del Pintor</td>
+            <th>Frida Kahlo</th>
+            <th>Surrealismo</th>
+            <th>Mexicana</th>
+            <th>https://www.google.com/search?q=La+columna+rota&stick=H4sIAAAAAAAAAONgFuLUz9U3MDTNNjBR4tZP1zc0Mqw0SCov0VLKTrbSL8ssLk3MiU8sKkFiZhaXWJXnF2UXP2KM5xZ4-eOesFTYpDUnrzEGcBGhSUiNi801rySzpFJIhotXCmG9BoMUNxeCa8WkwcSziJXfJ1EhOT-nNDcvUaEovyQRAK7yamSyAAAA&sxsrf=ALeKk00n3U-9-IMEeBA14V3ikk1bE0FzAQ:1591216519800&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj9kLG7v-bpAhVC7J4KHdkJDawQ_AUoAXoECBYQAw&biw=1366&bih=657#imgrc=qIBTI1vGzEBtJM</th>
+           
+        </tr>
+        </thead>
+        <tbody>
+        {{#each pintores }}
+        <tr>
+            <td>{{Pintor}}</td>
+            <td>{{ corriente }}</td>
+            <td>{{ nacionalidad }}</td>
+            <td>{{ Pintura }}</td>
+            
+        </tr>
+        {{/ each }}
+        </tbody>
+    </table>
+    {{ else }}
+    <div>No se encontraron Pintores</div>
+    {{/if}}
+</div>
+{{> footer}}
