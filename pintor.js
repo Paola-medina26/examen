@@ -1,5 +1,5 @@
-const express = require('express');
-let pintor = require('../controllers/PintoresController.js');
+const express= require('express');
+let pintor = require('../controllers/PintoresControllers.js');
 
 let router = express.Router();
 
