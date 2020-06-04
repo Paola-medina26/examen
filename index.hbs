@@ -1,32 +1,75 @@
-{{> header}}
+{{>header}}
 <div class="container">
-    <h1>Pintores</h1>
-    {{#if pintores }}
-    
-        <thead>
+<h1>Pintores</h1>
+{{#if pintores}}
+<table class="table table-dark table-hover">
+    <thead>
         <tr>
-            <td>Nombre del Pintor</td>
-            <th>Frida Kahlo</th>
-            <th>Surrealismo</th>
-            <th>Mexicana</th>
-            <th>https://www.google.com/search?q=La+columna+rota&stick=H4sIAAAAAAAAAONgFuLUz9U3MDTNNjBR4tZP1zc0Mqw0SCov0VLKTrbSL8ssLk3MiU8sKkFiZhaXWJXnF2UXP2KM5xZ4-eOesFTYpDUnrzEGcBGhSUiNi801rySzpFJIhotXCmG9BoMUNxeCa8WkwcSziJXfJ1EhOT-nNDcvUaEovyQRAK7yamSyAAAA&sxsrf=ALeKk00n3U-9-IMEeBA14V3ikk1bE0FzAQ:1591216519800&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj9kLG7v-bpAhVC7J4KHdkJDawQ_AUoAXoECBYQAw&biw=1366&bih=657#imgrc=qIBTI1vGzEBtJM</th>
            
+            <td>Nombre</td>
+            <td>Nacionalidad</td>
+            <td>Corriente</td>
+            <td>Pintura</td>
         </tr>
-        </thead>
-        <tbody>
-        {{#each pintores }}
+    </thead>
+    <tbody>
+        {{#each pintores}}
         <tr>
-            <td>{{Pintor}}</td>
-            <td>{{ corriente }}</td>
-            <td>{{ nacionalidad }}</td>
-            <td>{{ Pintura }}</td>
-            
+            <td>Frida Kahlo</td>
+            <td>Mexicana</td>
+            <td>Surealismo</td>
+            <td><img src="/images/espalda.jpg" ></td>
+            <td>{{pintura}}</td> 
         </tr>
-        {{/ each }}
-        </tbody>
+        {{/each}}
+    </tbody>
+    <tbody>
+        {{#each pintores}}
+        <tr>
+            <td>Leonora  Carrington</td>
+            <td>Mexicana</td>
+            <td>Surealismo</td>
+            <td><img src="/images/leo.jpg" ></td>
+            <td>{{pintura}}</td> 
+        </tr>
+        {{/each}}
+    </tbody>
+    <tbody>
+        {{#each pintores}}
+        <tr>
+            <td>Remedios Varo</td>
+            <td>Mexicana</td>
+            <td>Surealismo</td>
+            <td><img src="/images/remdios.jpg" ></td>
+            <td>{{pintura}}</td> 
+        </tr>
+        {{/each}}
+    </tbody>
+    <tbody>
+        {{#each pintores}}
+        <tr>
+            <td>Maria Izquierdo</td>
+            <td>Mexicana</td>
+            <td>Surealismo</td>
+            <td><img src="/images/maria.jpg" ></td>
+            <td>{{pintura}}</td> 
+        </tr>
+        {{/each}}
+    </tbody>
+<tbody>
+        {{#each pintores}}
+        <tr>
+            <td>Dorothea Tanning</td>
+            <td>Americana</td>
+            <td>Arte moderno</td>
+            <td><img src="/images/doro.jpg" ></td>
+            <td>{{pintura}}</td> 
+        </tr>
+        {{/each}}
+    </tbody>
     </table>
-    {{ else }}
-    <div>No se encontraron Pintores</div>
-    {{/if}}
+{{else}}
+<div> No se encuentran pintores</div>
+{{/if}}
 </div>
-{{> footer}}
+{{>footer}}
